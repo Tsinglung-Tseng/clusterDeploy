@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: slurm-worker
 spec:
+  nodeName: cs1
+  hostNetwork: true
   containers:
   - image: hub.tech-pi.com/env/slurm-worker:latest
     name: slurm-worker

@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: slurm-client
 spec:
+  nodeName: cs0
+  hostNetwork: true
   containers:
   - image: hub.tech-pi.com/env/slurm-client:latest
     name: slurm-client
