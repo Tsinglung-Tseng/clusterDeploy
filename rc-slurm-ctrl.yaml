@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: slurm-ctrl
+spec: 
+  replicas: 1
+  template:
+    metadata:
+      name: slurm-ctrl
+      labels:
+        app: slurm-ctrl
+    spec:
+      containers:
+      - name: slurm-ctrl
+        image: hub.tech-pi.com/env/slurm-ctrl
