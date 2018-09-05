@@ -12,3 +12,5 @@ spec:
       - "3600"
     imagePullPolicy: IfNotPresent
   restartPolicy: Always
+  #hostNetwork: true
+  #dnsPolicy: ClusterFirstWithHostNet
