@@ -12,9 +12,5 @@ spec:
     spec:
       containers:
       - name: slurm-ctrl
-        image: hub.tech-pi.com/env/slurm-ctrl
+        image: hub.tech-pi.com/env/slurm-ctrl:latest
         imagePullPolicy: IfNotPresent
-        tty: true
-    dnsPolicy: ClusterFirst
-    restartPolicy: Always
-    schedulerName: default-scheduler
