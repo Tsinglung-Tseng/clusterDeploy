@@ -4,7 +4,7 @@ metadata:
   name: slurm-ctrl
 spec:
   nodeName: cs0
-  hostNetwork: true
+  #hostNetwork: true
   containers:
   - image: hub.tech-pi.com/env/slurm-ctrl:latest
     name: slurm-ctrl
