@@ -1,10 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: slurm-worker
+  name: slurm-worker-cs2
 spec:
   nodeName: cs2
-  #hostNetwork: true
   containers:
   - image: hub.tech-pi.com/env/slurm-worker:latest
     name: slurm-worker
