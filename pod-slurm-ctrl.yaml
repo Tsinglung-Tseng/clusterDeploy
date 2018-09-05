@@ -10,13 +10,13 @@ spec:
     - mountPath: /etc/slurm-llnl
       name: slurm-config
     - mountPath: /opt/spack
-      name: spack-develop-root
+      name: spack
   volumes:
   - name: slurm-config
     hostPath: 
       path: /mnt/gluster/k8s-pv/slurm-config
       type: Directory
-  - name: spack-develop-root
+  - name: spack
     hostPath:
-      path: /mnt/gluster/k8s-pv/spack-develop-root
+      path: /mnt/gluster/k8s-pv/spack
       type: Directory
