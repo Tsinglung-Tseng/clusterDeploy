@@ -11,6 +11,21 @@ spec:
         app: slurm-ctrl
     spec:
       containers:
-      - name: slurm-ctrl
-        image: hub.tech-pi.com/env/slurm-ctrl:latest
-        imagePullPolicy: IfNotPresent
+      - image: hub.tech-pi.com/env/slurm-ctrl:latest
+        name: slurm-ctrl
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
+        volumeMounts:
+        - mountPath: /etc/slurm-llnl
+          name: slurm-config
+        - mountPath: /opt/spack
+          name: spack
+      volumes:
+      - name: slurm-config
+        hostPath: 
+          path: /mnt/gluster/k8s-pv/slurm-config
+          type: Directory
+      - name: spack
+        hostPath:
+          path: /mnt/gluster/k8s-pv/spack
+          type: Directory
