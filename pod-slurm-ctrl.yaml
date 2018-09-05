@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: slurm-control
+  name: slurm-ctrl
 spec:
   containers:
   - image: hub.tech-pi.com/env/slurm-ctrl:latest
     name: slurm-ctrl
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;" ]
     volumeMounts:
     - mountPath: /etc/slurm-llnl
       name: slurm-config
