@@ -24,7 +24,7 @@ spec:
       type: Directory
   - name: spack
     hostPath:
-      path: /mnt/gluster/k8s-pv/spack
+      path: /mnt/nfs/spack
       type: Directory
   - name: data
     hostPath:
